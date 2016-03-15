@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.background {
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		    width: 100vw;
+		    height: 100vh;
+		    -webkit-transition: opacity .9s linear;
+		    -moz-transition: opacity .9s linear;
+		    -o-transition: opacity .9s linear;
+		    transition: opacity .9s linear;
+		    opacity:0;
+		    filter: alpha(opacity=0);
+		}
+		#background1 {
+		    background: url(images/1.jpg) no-repeat;
+		            background-size: cover;    
+		}
+		#background2 {
+		    background: url(images/2.jpg) no-repeat;
+		            background-size: cover;    
+		}
+		#background3 {
+		    background: url(images/3.jpg) no-repeat;
+		            background-size: cover;
+		    }
+		#background4 {
+		    background: url(images/4.jpg) no-repeat;
+		            background-size: cover;
+		}
+		#background5 {
+		    background: url(images/5.jpg) no-repeat;
+		            background-size: cover;
+		}
+		.fadeIn {
+		    opacity: 1;
+		    filter: alpha(opacity=100);
+		}
+		.pagination {
+		    width: auto;
+		    display: table;
+		    margin: 0 auto
+		}
+		.pagination-panel {
+		    width: 100%;
+		    position: fixed;
+		    bottom: 50px;
+		    z-index: 100;
+		    height: auto
+		}
+		.pagination li {
+		    border-radius: 15px;
+		    height: 15px;
+		    width: 15px;
+		    background: #fff;
+		    float: left;
+		    margin-right: 10px;
+		    list-style-type: none
+		}
+
+		.pagination li.active {
+		    background: #52c6d8
+		}
+		.pagination li:last-child {
+		    margin-right: 0
+		}
+	</style>
+</head>
+<body>
+
+	<div id="imgs">
+	  <div id="background1" class="background"></div>
+	  <div id="background2" class="background"></div>
+	  <div id="background3" class="background"></div>
+	  <div id="background4" class="background"></div>
+	  <div id="background5" class="background"> </div>
+	</div>
+	
+	<div class="pagination-panel">
+	  <ul class="pagination">
+	    <li id="dot_0" class="page-dot"></li>
+	    <li id="dot_1" class="page-dot"></li>
+	    <li id="dot_2" class="page-dot"></li>
+	    <li id="dot_3" class="page-dot"></li>
+	    <li id="dot_4" class="page-dot"></li>
+	  </ul>
+	</div>
+	<script type="text/javascript" src="swipe.js"></script>
+	<script type="text/javascript">
+		//传参
+		var content = document.getElementById('imgs');
+
+		var imgs = new swipe(content,30,true,6000)
+	</script>
+</body>
+</html>
